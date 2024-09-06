@@ -2,7 +2,7 @@
 session_start();
 require '../config/config.php';
 
-$query = "SELECT * FROM orders ORDER BY order_date DESC";
+$query = "SELECT * FROM orders ORDER BY order_date ASC";
 $ordersResult = $conn->query($query);
 
 function getOrderItems($orderId, $conn) {
