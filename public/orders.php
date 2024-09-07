@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_status'])) {
                     <tr>
                         <td><?php echo $order['id']; ?></td>
                         <td><?php echo htmlspecialchars($order['customer_name']); ?></td>
-                        <td>$<?php echo number_format($order['total_amount'], 2); ?></td>
+                        <td>MMK <?php echo number_format($order['total_amount']); ?></td>
                         <td>
                             <span class="badge <?php 
                                 echo $order['status'] == 'completed' ? 'bg-success-subtle text-dark' : 
@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_status'])) {
                         </td>
                         <td><?php echo date("F j, Y, g:i a", strtotime($order['order_date'])); ?></td>
                         <td>
-                            <?php if ($order['status'] != 'canceled') { ?>
+                            <?php if ($order['status'] != 'canceled' and $order['status'] != 'pending') { ?>
                                 <a href="print_receipt.php?order_id=<?php echo $order['id']; ?>" target="_blank" class="btn btn-outline-primary btn-sm">Print Receipt</a>
                             <?php } ?>
                             <button class="btn btn-outline-info btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#orderItems<?php echo $order['id']; ?>" aria-expanded="false">

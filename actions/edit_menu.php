@@ -122,8 +122,8 @@ if (isset($_GET['id'])) {
                 <div class="mb-3">
                     <label for="category" class="form-label">Category</label>
                     <select name="category" class="form-select" required>
-                        <option value="Drinks" <?php if ($menu['category'] == 'Drinks') echo 'selected'; ?>>Drinks</option>
-                        <option value="Desserts" <?php if ($menu['category'] == 'Desserts') echo 'selected'; ?>>Desserts</option>
+                        <option value="drinks" <?php if ($menu['category'] == 'drinks') echo 'selected'; ?>>Drinks</option>
+                        <option value="desserts" <?php if ($menu['category'] == 'desserts') echo 'selected'; ?>>Desserts</option>
                     </select>
                 </div>
                 <div class="mb-3">

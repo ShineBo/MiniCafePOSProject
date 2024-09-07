@@ -40,7 +40,7 @@
         <div class="thank-you-card">
             <h1>Thank You!</h1>
             <p>Your order has been successfully placed. We appreciate your business.</p>
-            <a href="order.php" class="btn btn-outline-primary">Back to Orders</a>
+            <a href="../frontend/" class="btn btn-outline-primary">Back to Orders</a>
         </div>
     </div>
 

@@ -39,7 +39,7 @@ $result = $conn->query($sql);
                         <div class="card-body">
                             <h5 class="card-title fw-bold"><?php echo htmlspecialchars($row['name']); ?></h5>
                             <p class="card-text text-muted"><?php echo htmlspecialchars($row['description']); ?></p>
-                            <p class="card-text"><strong>Price: $<?php echo number_format($row['price'], 2); ?></strong></p>
+                            <p class="card-text"><strong>Price: MMK <?php echo number_format($row['price']); ?></strong></p>
                             <p class="badge bg-warning-subtle text-dark"><?php echo htmlspecialchars($row['category']); ?></p>
                         </div>
                         <div class="card-footer bg-info-subtle d-flex justify-content-between">
