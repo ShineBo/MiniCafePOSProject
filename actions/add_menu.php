@@ -55,6 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Menu - Mini Cafe POS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../public/style.css" rel="stylesheet">
     <style>
         .form-container {
             max-width: 600px;
@@ -77,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     </style>
 </head>
-<body class="bg-info-subtle">
+<body class="primary-color">
     <!-- Navbar -->
     <?php include '../public/navbar.php'; ?>
 

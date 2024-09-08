@@ -124,7 +124,7 @@ function reloadCart() {
     productList.appendChild(li);
   });
 
-  total.innerHTML = `<small>Subtotal (${count} items) $</small>` + totalPrice.toFixed(2);
+  total.innerHTML = `<small>Subtotal (${count} items) MMK</small>` + totalPrice.toFixed(2);
   quantity.innerHTML = count;
 }
 

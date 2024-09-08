@@ -13,8 +13,9 @@ $result = $conn->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menus - Mini Cafe POS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
-<body class="bg-info-subtle">
+<body>
     <?php include 'navbar.php'; ?>
 
     <div class="container mt-5">
@@ -34,7 +35,7 @@ $result = $conn->query($sql);
         <div class="row">
             <?php while($row = $result->fetch_assoc()) { ?>
                 <div class="col-md-4 mb-4">
-                    <div class="card shadow-sm h-100 bg-info-subtle">
+                    <div class="card shadow-sm h-100 primary-color">
                         <img src="../public/assets/images/<?php echo htmlspecialchars($row['photo_url']); ?>" class="card-img-top" alt="Menu Image" style="height: 200px; object-fit: cover;">
                         <div class="card-body">
                             <h5 class="card-title fw-bold"><?php echo htmlspecialchars($row['name']); ?></h5>
@@ -42,7 +43,7 @@ $result = $conn->query($sql);
                             <p class="card-text"><strong>Price: MMK <?php echo number_format($row['price']); ?></strong></p>
                             <p class="badge bg-warning-subtle text-dark"><?php echo htmlspecialchars($row['category']); ?></p>
                         </div>
-                        <div class="card-footer bg-info-subtle d-flex justify-content-between">
+                        <div class="card-footer primary-color d-flex justify-content-between">
                             <td>
                                 <a href="../actions/edit_menu.php?id=<?php echo $row['id']; ?>" class="btn btn-outline-primary btn rounded-pill px-3">Edit</a>
                                 <button class="btn btn-outline-danger btn rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal<?php echo $row['id']; ?>">Delete</button>

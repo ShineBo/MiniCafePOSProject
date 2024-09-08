@@ -5,9 +5,9 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
 <nav class="navbar navbar-expand-lg navbar-light bg-warning-subtle shadow-sm">
     <div class="container-fluid ">
-        <a class="navbar-brand fw-bold" href="../public/menus.php">
+        <a class="navbar-brand fw-bold text-light" href="../public/menus.php">
             <!-- <img src="../public/assets/logo.png" alt="Mini Cafe POS" height="40" class="d-inline-block align-text-top"> -->
-            Mini Cafe POS
+            Cafe Devo
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -15,16 +15,16 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link <?php echo ($current_page == 'menus.php') ? 'active' : ''; ?>" href="../public/menus.php">Menus</a>
+                    <a class="nav-link text-light <?php echo ($current_page == 'menus.php') ? 'active' : ''; ?>" href="../public/menus.php">Menus</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php echo ($current_page == 'orders.php') ? 'active' : ''; ?>" href="../public/orders.php">Orders</a>
+                    <a class="nav-link text-light <?php echo ($current_page == 'orders.php') ? 'active' : ''; ?>" href="../public/orders.php">Orders</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">
                 <?php if (isset($_SESSION['username'])): ?>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Welcome, <?php echo $_SESSION['username']; ?>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -39,7 +39,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
 <style>
     .navbar {
-        /* background-color: #f8f9fa !important; */
+        background-color: #453e3b !important;
         border-bottom: 2px solid #eee;
     }
     .navbar-brand img {

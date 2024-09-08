@@ -36,8 +36,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_status'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orders - Mini Cafe POS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
-<body class="bg-info-subtle">
+<body>
     <?php include 'navbar.php'; ?>
     
     <div class="container mt-5">
@@ -96,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_status'])) {
                                     <?php
                                     $orderItems = getOrderItems($order['id'], $conn);
                                     while ($item = $orderItems->fetch_assoc()) {
-                                        echo "<li class='list-group-item d-flex justify-content-between align-items-center'>{$item['name']} - {$item['quantity']} pcs <span>$".number_format($item['price'], 2)."</span></li>";
+                                        echo "<li class='list-group-item d-flex justify-content-between align-items-center'>{$item['name']} - {$item['quantity']} pcs <span>".number_format($item['price'], 2)." MMK</span></li>";
                                     }
                                     ?>
                                 </ul>
