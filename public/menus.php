@@ -1,6 +1,8 @@
 <?php
 session_start();
 require '../config/config.php';
+require '../config/auth.php';
+
 
 $sql = "SELECT * FROM menu_items ORDER BY created_at ASC";
 $result = $conn->query($sql);

@@ -1,5 +1,7 @@
 <?php
 require '../config/config.php';
+require '../config/auth.php';
+
 
 if (isset($_GET['order_id'])) {
     $orderId = $_GET['order_id'];

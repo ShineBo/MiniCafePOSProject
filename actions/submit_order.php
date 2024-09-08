@@ -4,7 +4,6 @@ require '../config/config.php';
 ob_start();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Get POST data
     $customerName = $_POST['customer_name'];
     $menuItems = json_decode($_POST['menu_items'], true); // Decode JSON data
     $quantities = json_decode($_POST['quantities'], true); // Decode JSON data
@@ -23,7 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $price = $resultItem->fetch_assoc()['price'];
             $totalAmount += $price * $quantity;
 
-            // Close item statement
             $stmtItem->close();
         }
     }
@@ -58,13 +56,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 exit();
             }
 
-            // Close statements
             $stmtItem->close();
             $stmtOrderItem->close();
         }
     }
 
-    // Close connection
     $conn->close();
 
     // Redirect to thank you page

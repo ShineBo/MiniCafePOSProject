@@ -1,6 +1,7 @@
 <?php
 session_start();
 require '../config/config.php';
+require '../config/auth.php';
 
 $query = "SELECT * FROM orders ORDER BY order_date ASC";
 $ordersResult = $conn->query($query);

@@ -1,6 +1,8 @@
 <?php
 session_start();
 require '../config/config.php';
+require '../config/auth.php';
+
 
 $query = "SELECT * FROM menu_items ORDER BY name ASC";
 $menuItems = $conn->query($query);

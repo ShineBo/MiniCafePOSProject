@@ -1,6 +1,7 @@
 <?php
 session_start();
 require '../config/config.php';
+require '../config/auth.php';
 
 if (isset($_GET['id'])) {
     $menuId = $_GET['id'];

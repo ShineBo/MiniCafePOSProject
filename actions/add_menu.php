@@ -1,6 +1,7 @@
 <?php
 session_start();
 require '../config/config.php';
+require '../config/auth.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
