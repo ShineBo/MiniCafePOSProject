@@ -22,7 +22,7 @@ if (isset($_GET['id'])) {
         $description = $_POST['description'];
         $price = $_POST['price'];
         $category = $_POST['category'];
-        $photo_url = $menu['photo_url']; // Default to existing photo URL
+        $photo_url = $menu['photo_url'];
 
         // Check if a new file was uploaded
         if (isset($_FILES['photo']) && $_FILES['photo']['error'] == UPLOAD_ERR_OK) {
